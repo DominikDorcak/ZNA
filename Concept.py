@@ -1,3 +1,5 @@
+import os
+
 class Concept:
 
     def __init__(self,intent,extent):
@@ -17,5 +19,10 @@ class Concept:
             if not ot[i]==th[i]:
                 return False
         return True
+    
+    def fullDesc(self):
+        newline = os.linesep
+        tab = '\t'
+        return newline + "CONCEPT:" + newline + tab + "intent: " + str(self.intent) + newline + tab + "extent: " + str(self.extent) + newline + "---------------------------------------------------------------------------------------------------------------"
 
 
